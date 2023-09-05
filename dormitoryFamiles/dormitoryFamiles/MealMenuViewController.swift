@@ -6,31 +6,37 @@
 //
 
 import UIKit
+import WebKit
 
 class MealMenuViewController: UIViewController {
     
-//    private lazy var schoolMealButton: UIButton = {
-//        let button = UIButton()
-//        button.setTitle("학식 보기", for: .normal)
-//        button.setTitleColor(UIColor.white, for: .normal)
-//        button.backgroundColor(UIColor.)
-//        //button.titleLabel?.font = UIFont(name: "SFProDisplay-Semibold", size: 18)
-//        return button
-//    }()
-//
+    private lazy var schoolMealButton: UIButton = {
+        let button = UIButton()
+        button.setTitle("학식 보기", for: .normal)
+        button.setTitleColor(UIColor.white, for: .normal)
+        button.backgroundColor = UIColor.titleColor
+        button.titleLabel?.font = UIFont(name: "SFProDisplay-Semibold", size: 18)
+        button.addTarget(nil, action: #selector(schoolMealButtonTapped), for: .touchUpInside)
+        return button
+    }()
+    
+    @objc func schoolMealButtonTapped() {
+        //self.navigationController?.pushViewController(SchoolWebViewController(), animated: true)
+        present(SchoolWebViewController(), animated: true)
+    }
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        self.view.addSubview(cancelButton)
-//        cancelButton.translatesAutoresizingMaskIntoConstraints = false
-//        NSLayoutConstraint.activate([
-//            self.cancelButton.topAnchor.constraint(equalTo: view.topAnchor, constant: 100),
-//            self.cancelButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 0),
-//            self.cancelButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: 0),
-//            self.cancelButton.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 0)
-//        ])
+        self.view.addSubview(schoolMealButton)
+        schoolMealButton.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            self.schoolMealButton.topAnchor.constraint(equalTo: view.topAnchor, constant: 100),
+            self.schoolMealButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 0),
+            self.schoolMealButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: 0),
+            self.schoolMealButton.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 0)
+        ])
     }
-
     
 }
