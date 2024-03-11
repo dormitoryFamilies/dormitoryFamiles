@@ -121,8 +121,10 @@
             </constraints>
             <connections>
                 <outlet property="content" destination="UnG-1R-eWJ" id="zSb-6D-tri"/>
+                <outlet property="dateLabel" destination="FZh-Mc-rxt" id="ye3-G2-Qad"/>
                 <outlet property="nickname" destination="WZy-il-bJw" id="MW6-cs-pWw"/>
                 <outlet property="rereplyButton" destination="TA2-OC-YSl" id="r7m-Jr-TeV"/>
+                <outlet property="timeLabel" destination="SlX-Ra-CtG" id="FCE-T7-lNm"/>
             </connections>
             <point key="canvasLocation" x="61.068702290076331" y="-3.1690140845070425"/>
         </collectionReusableView>

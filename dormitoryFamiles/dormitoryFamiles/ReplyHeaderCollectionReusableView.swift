@@ -17,6 +17,8 @@ class ReplyHeaderCollectionReusableView: UICollectionReusableView {
     var isDeleted: Bool?
     
     
+    @IBOutlet weak var timeLabel: UILabel!
+    @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var rereplyButton: UIButton!
     @IBOutlet weak var nickname: UILabel!
     @IBOutlet weak var content: UILabel!

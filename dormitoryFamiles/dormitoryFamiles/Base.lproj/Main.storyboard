@@ -2562,37 +2562,8 @@
                                                     <constraint firstAttribute="height" constant="4" id="Pbf-QL-Ufq"/>
                                                 </constraints>
                                             </view>
-                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="R7s-og-h6I">
-                                                <rect key="frame" x="20" y="663.33333333333337" width="63" height="21"/>
-                                                <subviews>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bulletinBoardChat" translatesAutoresizingMaskIntoConstraints="NO" id="8XW-eE-wYd">
-                                                        <rect key="frame" x="0.0" y="0.0" width="15" height="21"/>
-                                                    </imageView>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="댓글" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vtL-vq-hCw">
-                                                        <rect key="frame" x="19" y="0.0" width="29.666666666666671" height="21"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                        <color key="textColor" name="gray5"/>
-                                                        <nil key="highlightedColor"/>
-                                                        <userDefinedRuntimeAttributes>
-                                                            <userDefinedRuntimeAttribute type="string" keyPath="body2" value="댓글"/>
-                                                        </userDefinedRuntimeAttributes>
-                                                    </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="03l-FT-FCk">
-                                                        <rect key="frame" x="52.666666666666671" y="0.0" width="10.333333333333336" height="21"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                        <nil key="textColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                        <userDefinedRuntimeAttributes>
-                                                            <userDefinedRuntimeAttribute type="string" keyPath="body2" value="3"/>
-                                                        </userDefinedRuntimeAttributes>
-                                                    </label>
-                                                </subviews>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="21" id="905-Hf-ir3"/>
-                                                </constraints>
-                                            </stackView>
                                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ks2-cG-ESp">
-                                                <rect key="frame" x="0.0" y="708.33333333333337" width="393" height="288.66666666666663"/>
+                                                <rect key="frame" x="0.0" y="663.33333333333337" width="393" height="333.66666666666663"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="gaU-51-ZTR">
                                                     <size key="itemSize" width="128" height="128"/>
@@ -2621,13 +2592,12 @@
                                             <constraint firstItem="bHT-nc-4kp" firstAttribute="top" secondItem="zCM-Pt-zrq" secondAttribute="bottom" constant="16" id="Ccg-pI-KQy"/>
                                             <constraint firstItem="LzO-7n-Hi4" firstAttribute="top" secondItem="g8I-rb-EBj" secondAttribute="bottom" constant="16" id="Cts-vr-Z6P"/>
                                             <constraint firstAttribute="trailing" secondItem="ULa-b8-nsE" secondAttribute="trailing" id="E2e-br-5lK"/>
+                                            <constraint firstItem="ks2-cG-ESp" firstAttribute="top" secondItem="ULa-b8-nsE" secondAttribute="bottom" constant="20" id="FkW-mv-i5b"/>
                                             <constraint firstItem="gcn-uh-z8K" firstAttribute="top" secondItem="XXG-oc-o5X" secondAttribute="bottom" constant="20" id="IME-Vz-IKl"/>
                                             <constraint firstItem="XXG-oc-o5X" firstAttribute="leading" secondItem="LFM-0h-h1Z" secondAttribute="trailing" constant="6" id="J4m-iz-aOc"/>
                                             <constraint firstItem="zCM-Pt-zrq" firstAttribute="top" secondItem="gcn-uh-z8K" secondAttribute="bottom" constant="8" id="KaP-ID-NSb"/>
                                             <constraint firstItem="3XP-3L-Mrw" firstAttribute="top" secondItem="ihM-NF-joD" secondAttribute="bottom" constant="4" id="KgO-tx-vzX"/>
                                             <constraint firstItem="LFM-0h-h1Z" firstAttribute="leading" secondItem="LzO-7n-Hi4" secondAttribute="trailing" constant="12" id="MJj-eD-Ka0"/>
-                                            <constraint firstItem="ks2-cG-ESp" firstAttribute="top" secondItem="R7s-og-h6I" secondAttribute="bottom" constant="24" id="O4u-Wx-0R6"/>
-                                            <constraint firstItem="R7s-og-h6I" firstAttribute="leading" secondItem="pJ9-Zw-OY6" secondAttribute="leading" constant="20" id="Plu-Ij-aDR"/>
                                             <constraint firstItem="3XP-3L-Mrw" firstAttribute="leading" secondItem="XXG-oc-o5X" secondAttribute="trailing" constant="6" id="RxB-Bf-fkc"/>
                                             <constraint firstItem="zCM-Pt-zrq" firstAttribute="leading" secondItem="pJ9-Zw-OY6" secondAttribute="leading" constant="20" id="Szq-oe-Iec"/>
                                             <constraint firstAttribute="trailing" secondItem="zCM-Pt-zrq" secondAttribute="trailing" constant="20" id="VDm-Ht-Vfe"/>
@@ -2645,7 +2615,6 @@
                                             <constraint firstItem="XXG-oc-o5X" firstAttribute="top" secondItem="ihM-NF-joD" secondAttribute="bottom" constant="4" id="o7g-tA-5nC"/>
                                             <constraint firstItem="ks2-cG-ESp" firstAttribute="leading" secondItem="pJ9-Zw-OY6" secondAttribute="leading" id="ocE-Aq-Qap"/>
                                             <constraint firstItem="LFM-0h-h1Z" firstAttribute="top" secondItem="ihM-NF-joD" secondAttribute="bottom" constant="4" id="qyI-re-Rcz"/>
-                                            <constraint firstItem="R7s-og-h6I" firstAttribute="top" secondItem="ULa-b8-nsE" secondAttribute="bottom" constant="20" id="s9A-SO-fvg"/>
                                             <constraint firstItem="T8N-SY-msx" firstAttribute="top" secondItem="LzO-7n-Hi4" secondAttribute="top" id="t2G-Rz-wVq"/>
                                             <constraint firstItem="5A3-Fj-D1b" firstAttribute="top" secondItem="Y1o-fA-GbL" secondAttribute="bottom" constant="20" id="tEk-i9-Wd3"/>
                                             <constraint firstItem="5A3-Fj-D1b" firstAttribute="leading" secondItem="Y1o-fA-GbL" secondAttribute="leading" id="tt9-VJ-5NT"/>
@@ -2814,7 +2783,6 @@
                         <outlet property="nickname" destination="T8N-SY-msx" id="Oke-qc-XfI"/>
                         <outlet property="profileImage" destination="LzO-7n-Hi4" id="PH2-52-fM6"/>
                         <outlet property="replyCountLabel" destination="2cL-XS-mzW" id="9tG-dV-0S8"/>
-                        <outlet property="replyCountLabel2" destination="03l-FT-FCk" id="kNB-tD-TTB"/>
                         <outlet property="roundLine" destination="ADz-W5-7tf" id="t1V-Gh-dzW"/>
                         <outlet property="statusTag" destination="WpS-3I-E5y" id="1k1-U9-KOa"/>
                         <outlet property="textViewSuperView" destination="wxR-xj-rw3" id="lmO-KF-1wL"/>
@@ -3494,7 +3462,6 @@
         <image name="arrow.right" catalog="system" width="128" height="95"/>
         <image name="bulletinBaordDetailLike" width="15" height="14"/>
         <image name="bulletinBoardAlram" width="20" height="24"/>
-        <image name="bulletinBoardChat" width="15" height="15"/>
         <image name="bulletinBoardDetailChat" width="16" height="16"/>
         <image name="bulletinBoardEllipse" width="2" height="2"/>
         <image name="bulletinBoardLogo" width="40" height="32"/>

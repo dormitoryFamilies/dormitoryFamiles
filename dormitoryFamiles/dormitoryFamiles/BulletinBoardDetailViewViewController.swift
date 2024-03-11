@@ -37,7 +37,6 @@ class BulletinBoardDetailViewViewController: UIViewController {
     
     @IBOutlet weak var chatCountLabel: UILabel!
     
-    @IBOutlet weak var replyCountLabel2: UILabel!
     var dataClass : DataClass?
     var id: Int = 0
     var collectionViewHeightConstraint = NSLayoutConstraint()
@@ -130,7 +129,6 @@ class BulletinBoardDetailViewViewController: UIViewController {
                 self.dataClass = response.data
                 DispatchQueue.main.async { [self] in
                     self.replyCountLabel.text = String(dataClass!.totalCount)
-                    self.replyCountLabel2.body2 = String(dataClass!.totalCount)
                 }
             case .failure(let error):
                 
@@ -257,7 +255,9 @@ extension BulletinBoardDetailViewViewController: UICollectionViewDelegate, UICol
             headerView.memberId = replyComment?.memberId ?? 0
             headerView.profileUrl = replyComment?.profileUrl ?? ""
             headerView.nickname.text = replyComment?.nickname ?? ""
-            headerView.createdAt = replyComment?.createdAt ?? ""
+            let datetime = replyComment?.createdAt ?? ""
+            headerView.timeLabel.body2 = changeToTime(createdAt: datetime)
+            headerView.dateLabel.body2 = changeToDate(createdAt: datetime)
             headerView.content.text = replyComment?.content ?? ""
             headerView.isWriter = ((replyComment?.isWriter) != nil)
             headerView.isDeleted = ((replyComment?.isDeleted) != nil)
