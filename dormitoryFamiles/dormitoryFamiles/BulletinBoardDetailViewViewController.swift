@@ -194,9 +194,17 @@ extension BulletinBoardDetailViewViewController: UITextViewDelegate {
 }
 
 extension BulletinBoardDetailViewViewController: UICollectionViewDelegate, UICollectionViewDataSource {
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return dataClass?.comments[section].replyComments?.count ?? 0
-    }
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+           return dataClass?.comments.count ?? 0
+       }
+
+       func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+           guard let count = dataClass?.comments[section].replyComments?.count, count > 0 else {
+               return 0
+           }
+           return count
+       }
+
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "rereplyCell", for: indexPath) as! ReplyCollectionViewCell
