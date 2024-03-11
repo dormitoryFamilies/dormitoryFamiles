@@ -66,6 +66,28 @@ class BulletinBoardDetailViewViewController: UIViewController {
         self.url = url
     }
     
+    @IBAction func replyPostButtonTapped(_ sender: UIButton) {
+        let commentData = ["content": commentTextView.text]
+        
+        if let jsonData = try? JSONEncoder().encode(commentData) {
+            let url = URL(string: Network.replyUrl(id: id))!
+            var request = URLRequest(url: url)
+            request.httpMethod = "POST"
+            request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+            request.httpBody = jsonData
+            
+            let task = URLSession.shared.dataTask(with: request) { data, response, error in
+                if let error = error {
+                    print("Error: \(error)")
+                } else if let data = data {
+                    print("Response: \(response)")
+                }
+            }
+            
+            task.resume()
+        }
+    }
+    
     private func network(url: String) {
         Network.getMethod(url: url) { (result: Result<DetailResponse, Error>) in
             switch result {

@@ -36,6 +36,10 @@ struct Network {
         return "http://43.202.254.127:8080/api/articles/\(id)/comments"
     }
     
+    static func postReplyUrl(id: Int) -> String {
+        return "http://43.202.254.127:8080/api/articles/\(id)/comments"
+    }
+    
     static func getMethod<T: Codable>(url: String, completion: @escaping (Result<T, Error>) -> Void) {
         let url = URL(string: url)!
         let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
