@@ -37,6 +37,7 @@ class BulletinBoardDetailViewViewController: UIViewController {
     
     @IBOutlet weak var chatCountLabel: UILabel!
     
+    @IBOutlet weak var replyCountLabel2: UILabel!
     var dataClass : DataClass?
     var id: Int = 0
     var collectionViewHeightConstraint = NSLayoutConstraint()
@@ -105,8 +106,10 @@ class BulletinBoardDetailViewViewController: UIViewController {
             switch result {
             case .success(let response):
                 self.dataClass = response.data
-                print(dataClass as Any)
-                
+                DispatchQueue.main.async { [self] in
+                    self.replyCountLabel.text = String(dataClass!.totalCount)
+                    self.replyCountLabel2.body2 = String(dataClass!.totalCount)
+                }
             case .failure(let error):
                 
                 print(error.localizedDescription)

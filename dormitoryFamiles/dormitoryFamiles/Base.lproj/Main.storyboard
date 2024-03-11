@@ -2811,6 +2811,7 @@
                         <outlet property="nickname" destination="T8N-SY-msx" id="Oke-qc-XfI"/>
                         <outlet property="profileImage" destination="LzO-7n-Hi4" id="PH2-52-fM6"/>
                         <outlet property="replyCountLabel" destination="2cL-XS-mzW" id="9tG-dV-0S8"/>
+                        <outlet property="replyCountLabel2" destination="03l-FT-FCk" id="kNB-tD-TTB"/>
                         <outlet property="roundLine" destination="ADz-W5-7tf" id="t1V-Gh-dzW"/>
                         <outlet property="statusTag" destination="WpS-3I-E5y" id="1k1-U9-KOa"/>
                         <outlet property="textViewSuperView" destination="wxR-xj-rw3" id="lmO-KF-1wL"/>
