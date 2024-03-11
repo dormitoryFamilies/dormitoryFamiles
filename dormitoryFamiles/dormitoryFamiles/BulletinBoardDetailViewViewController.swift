@@ -8,7 +8,6 @@
 import UIKit
 
 class BulletinBoardDetailViewViewController: UIViewController {
-    
     @IBOutlet weak var roundLine: UIView!
     
     @IBOutlet weak var collectionView: UICollectionView!
@@ -36,7 +35,7 @@ class BulletinBoardDetailViewViewController: UIViewController {
     @IBOutlet weak var replyCountLabel: UILabel!
     
     @IBOutlet weak var chatCountLabel: UILabel!
-    
+    let headerCell = ReplyHeaderCollectionReusableView()
     var dataClass : DataClass?
     var id: Int = 0
     var collectionViewHeightConstraint = NSLayoutConstraint()
@@ -197,6 +196,17 @@ class BulletinBoardDetailViewViewController: UIViewController {
         commentTextView.sizeToFit()
     }
     
+    func headerButtonDidTapped() {
+        print("dd")
+        let actionSheet = UIAlertController(title: "댓글 메뉴", message: nil, preferredStyle: .actionSheet)
+           actionSheet.addAction(UIAlertAction(title: "삭제하기", style: .destructive, handler: {(ACTION:UIAlertAction) in
+               print("이웃을 끊습니다.")
+           }))
+           actionSheet.addAction(UIAlertAction(title: "닫기", style: .cancel, handler: nil))
+           
+           self.present(actionSheet, animated: true, completion: nil)
+    }
+    
 }
 
 
@@ -216,7 +226,7 @@ extension BulletinBoardDetailViewViewController: UITextViewDelegate {
     }
 }
 
-extension BulletinBoardDetailViewViewController: UICollectionViewDelegate, UICollectionViewDataSource {
+extension BulletinBoardDetailViewViewController: UICollectionViewDelegate, UICollectionViewDataSource, HeaderDelegate {
     func numberOfSections(in collectionView: UICollectionView) -> Int {
            return dataClass?.comments.count ?? 0
        }
@@ -250,7 +260,7 @@ extension BulletinBoardDetailViewViewController: UICollectionViewDelegate, UICol
             let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "replyCell", for: indexPath) as! ReplyHeaderCollectionReusableView
             
             let replyComment = dataClass?.comments[indexPath.section]
-            
+            headerView.buttonDelegate = self
             headerView.commentId = replyComment?.commentId ?? 0
             headerView.memberId = replyComment?.memberId ?? 0
             headerView.profileUrl = replyComment?.profileUrl ?? ""

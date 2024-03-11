@@ -7,8 +7,13 @@
 
 import UIKit
 
+protocol HeaderDelegate: AnyObject {
+    func headerButtonDidTapped()
+}
+
 class ReplyHeaderCollectionReusableView: UICollectionReusableView {
-    
+    weak var buttonDelegate: HeaderDelegate?
+   
     var commentId: Int?
     var memberId: Int?
     var profileUrl: String?
@@ -28,4 +33,7 @@ class ReplyHeaderCollectionReusableView: UICollectionReusableView {
         rereplyButton.contentVerticalAlignment = .top
     }
     
+    @IBAction func moreButtonTapped(_ sender: UIButton) {
+        buttonDelegate?.headerButtonDidTapped()
+    }
 }

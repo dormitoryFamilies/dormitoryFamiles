@@ -83,6 +83,9 @@
                             <rect key="frame" x="588" y="4" width="48" height="38"/>
                             <state key="normal" title="Button"/>
                             <buttonConfiguration key="configuration" style="plain" image="bulletinBoardMore"/>
+                            <connections>
+                                <action selector="moreButtonTapped:" destination="U6b-Vx-4bR" eventType="touchUpInside" id="dBd-FZ-Sv7"/>
+                            </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TA2-OC-YSl">
                             <rect key="frame" x="60" y="95.333333333333329" width="102" height="34.333333333333329"/>
@@ -124,7 +127,7 @@
                 <outlet property="dateLabel" destination="FZh-Mc-rxt" id="ye3-G2-Qad"/>
                 <outlet property="nickname" destination="WZy-il-bJw" id="MW6-cs-pWw"/>
                 <outlet property="rereplyButton" destination="TA2-OC-YSl" id="r7m-Jr-TeV"/>
-                <outlet property="timeLabel" destination="SlX-Ra-CtG" id="FCE-T7-lNm"/>
+                <outlet property="timeLabel" destination="SlX-Ra-CtG" id="Qqa-UL-nw5"/>
             </connections>
             <point key="canvasLocation" x="61.068702290076331" y="-3.1690140845070425"/>
         </collectionReusableView>
