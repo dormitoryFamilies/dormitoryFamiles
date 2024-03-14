@@ -196,17 +196,6 @@ class BulletinBoardDetailViewViewController: UIViewController {
         commentTextView.sizeToFit()
     }
     
-    func headerButtonDidTapped() {
-        print("dd")
-        let actionSheet = UIAlertController(title: "댓글 메뉴", message: nil, preferredStyle: .actionSheet)
-           actionSheet.addAction(UIAlertAction(title: "삭제하기", style: .destructive, handler: {(ACTION:UIAlertAction) in
-               print("이웃을 끊습니다.")
-           }))
-           actionSheet.addAction(UIAlertAction(title: "닫기", style: .cancel, handler: nil))
-           
-           self.present(actionSheet, animated: true, completion: nil)
-    }
-    
 }
 
 
@@ -227,6 +216,31 @@ extension BulletinBoardDetailViewViewController: UITextViewDelegate {
 }
 
 extension BulletinBoardDetailViewViewController: UICollectionViewDelegate, UICollectionViewDataSource, HeaderDelegate {
+    func moreButtonTapped(replyId: Int) {
+        print(replyId)
+        let actionSheet = UIAlertController(title: "댓글 메뉴", message: nil, preferredStyle: .actionSheet)
+        actionSheet.addAction(UIAlertAction(title: "삭제하기", style: .destructive, handler: {(ACTION:UIAlertAction) in
+            
+            
+            Network.deleteMethod(url: "http://43.202.254.127:8080/api/comments/\(replyId)") { (result: Result<ReplyDelete, Error>) in
+                switch result {
+                case .success(let response):
+                    print(response)
+                    print("아아")
+                case .failure(let error):
+                    print("Error: \(error)")
+                }
+            }
+            
+        }))
+        actionSheet.addAction(UIAlertAction(title: "닫기", style: .cancel, handler: nil))
+        
+        self.present(actionSheet, animated: true, completion: nil)
+    }
+
+    
+    
+    
     func numberOfSections(in collectionView: UICollectionView) -> Int {
            return dataClass?.comments.count ?? 0
        }
@@ -277,6 +291,10 @@ extension BulletinBoardDetailViewViewController: UICollectionViewDelegate, UICol
         default:
             assert(false, "Invalid element type")
         }
+    }
+    
+    func headerButtonTapped(forIndexPath indexPath: IndexPath) {
+        
     }
     
 }

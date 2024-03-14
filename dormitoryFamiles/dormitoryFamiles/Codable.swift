@@ -106,3 +106,8 @@ struct ReplyComment: Codable {
     let content: String
     let isWriter: Bool
 }
+
+struct ReplyDelete: Codable {
+    let code: Int
+    let errorMessage: String
+}

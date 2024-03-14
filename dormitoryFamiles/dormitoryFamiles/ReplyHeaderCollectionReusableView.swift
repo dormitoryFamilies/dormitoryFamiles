@@ -8,7 +8,7 @@
 import UIKit
 
 protocol HeaderDelegate: AnyObject {
-    func headerButtonDidTapped()
+    func moreButtonTapped(replyId: Int)
 }
 
 class ReplyHeaderCollectionReusableView: UICollectionReusableView {
@@ -34,6 +34,7 @@ class ReplyHeaderCollectionReusableView: UICollectionReusableView {
     }
     
     @IBAction func moreButtonTapped(_ sender: UIButton) {
-        buttonDelegate?.headerButtonDidTapped()
+        buttonDelegate!.moreButtonTapped(replyId: commentId!)
     }
+    
 }
