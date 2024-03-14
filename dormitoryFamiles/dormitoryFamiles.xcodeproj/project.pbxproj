@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		0C03D7843BE1BA839B23F614 /* Pods_dormitoryFamiles.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43ACFB5BF55DE00DF2B4C0CA /* Pods_dormitoryFamiles.framework */; };
 		DB00F5B42B81D17C00DDA1E6 /* ReplyCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB00F5B22B81D17C00DDA1E6 /* ReplyCollectionViewCell.swift */; };
-		DB00F5B52B81D17C00DDA1E6 /* ReplyCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB00F5B32B81D17C00DDA1E6 /* ReplyCollectionViewCell.xib */; };
 		DB02B5292B98C92200C45F56 /* ReplyHeaderCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB02B5272B98C92200C45F56 /* ReplyHeaderCollectionReusableView.swift */; };
 		DB02B52A2B98C92200C45F56 /* ReplyHeaderCollectionReusableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB02B5282B98C92200C45F56 /* ReplyHeaderCollectionReusableView.xib */; };
 		DB1E0E892B629804000A4AA5 /* DormitoryButtonHandlingProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB1E0E882B629804000A4AA5 /* DormitoryButtonHandlingProtocol.swift */; };
@@ -24,21 +23,17 @@
 		DB2B7BCF2B457F7200C1847D /* UIButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2B7BCE2B457F7200C1847D /* UIButtonExtension.swift */; };
 		DB3F18092B6162AB002F1738 /* ProfileSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3F18082B6162AB002F1738 /* ProfileSettingViewController.swift */; };
 		DB41008C2B6A665D005C4DD8 /* BrownVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB41008B2B6A665D005C4DD8 /* BrownVC.swift */; };
-		DB48CD082B6905C600E8C7AA /* PopularCollectionViewHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB48CD062B6905C600E8C7AA /* PopularCollectionViewHeader.swift */; };
 		DB496DEB2B70EAFB00F97324 /* TabbarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB496DEA2B70EAFB00F97324 /* TabbarViewController.swift */; };
 		DB5ACD602AA70D190054CA15 /* ExtenstionColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB5ACD5F2AA70D190054CA15 /* ExtenstionColor.swift */; };
-		DB5ACD622AA714260054CA15 /* SchoolWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB5ACD612AA714260054CA15 /* SchoolWebViewController.swift */; };
 		DB61AA342B4C1EA70040418B /* RegisterPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB61AA332B4C1EA70040418B /* RegisterPostViewController.swift */; };
 		DB74D0C62B73EEBF00A90D68 /* Codable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB74D0C52B73EEBF00A90D68 /* Codable.swift */; };
 		DB7EF2772B5E9CB20062FAB5 /* ServicePermissonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB7EF2762B5E9CB20062FAB5 /* ServicePermissonViewController.swift */; };
 		DB7EF2792B5EA4B00062FAB5 /* AlrmElementView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB7EF2782B5EA4B00062FAB5 /* AlrmElementView.swift */; };
-		DB7EF27B2B5EA6C60062FAB5 /* AlramViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB7EF27A2B5EA6C60062FAB5 /* AlramViewController.swift */; };
 		DB7EF27D2B5EAC790062FAB5 /* ChoiceDormitoryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB7EF27C2B5EAC790062FAB5 /* ChoiceDormitoryButton.swift */; };
 		DB81D0002B56E723005EF497 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB81CFFF2B56E723005EF497 /* UIColorExtension.swift */; };
 		DB932AC12B6511E300B456FB /* BulluetinBoardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB932ABF2B6511E300B456FB /* BulluetinBoardCollectionViewCell.swift */; };
 		DB932AC22B6511E300B456FB /* BulluetinBoardCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB932AC02B6511E300B456FB /* BulluetinBoardCollectionViewCell.xib */; };
 		DBB345F22B42BFD100E70380 /* BulletinBoardMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB345F12B42BFD100E70380 /* BulletinBoardMainViewController.swift */; };
-		DBB345FE2B42D95600E70380 /* bulletinBoardMainNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB345FD2B42D95600E70380 /* bulletinBoardMainNavigation.swift */; };
 		DBC54C432B568B350071164C /* UIFontExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBC54C422B568B350071164C /* UIFontExtension.swift */; };
 		DBC54C552B56A46B0071164C /* PretendardVariable.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DBC54C542B56A46B0071164C /* PretendardVariable.ttf */; };
 		DBC54C572B56A4820071164C /* Pretendard-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DBC54C562B56A4820071164C /* Pretendard-Bold.ttf */; };
@@ -47,7 +42,6 @@
 		DBC54C5F2B56A4A80071164C /* Pretendard-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DBC54C5E2B56A4A80071164C /* Pretendard-SemiBold.ttf */; };
 		DBC54C632B56A86D0071164C /* NPSfont_bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DBC54C622B56A86D0071164C /* NPSfont_bold.ttf */; };
 		DBCE10E12B595506008C3367 /* loginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCE10E02B595506008C3367 /* loginViewController.swift */; };
-		DBCE10E32B598308008C3367 /* notificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCE10E22B598308008C3367 /* notificationViewController.swift */; };
 		DBD1E7FC2B84A9D500FD71C6 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD1E7FB2B84A9D500FD71C6 /* Network.swift */; };
 		DBDF96EF2B84BFB2000E74AE /* ProfileFinishedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBDF96EE2B84BFB2000E74AE /* ProfileFinishedViewController.swift */; };
 		DBF466FB2AA5F4E4009FF3EB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF466FA2AA5F4E4009FF3EB /* AppDelegate.swift */; };
@@ -64,7 +58,6 @@
 		BDEE29642D63D4042822783C /* Pods-dormitoryFamiles.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-dormitoryFamiles.release.xcconfig"; path = "Target Support Files/Pods-dormitoryFamiles/Pods-dormitoryFamiles.release.xcconfig"; sourceTree = "<group>"; };
 		C5E033F1B4291ED8F85F0DAE /* Pods-dormitoryFamiles.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-dormitoryFamiles.debug.xcconfig"; path = "Target Support Files/Pods-dormitoryFamiles/Pods-dormitoryFamiles.debug.xcconfig"; sourceTree = "<group>"; };
 		DB00F5B22B81D17C00DDA1E6 /* ReplyCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReplyCollectionViewCell.swift; sourceTree = "<group>"; };
-		DB00F5B32B81D17C00DDA1E6 /* ReplyCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReplyCollectionViewCell.xib; sourceTree = "<group>"; };
 		DB02B5272B98C92200C45F56 /* ReplyHeaderCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReplyHeaderCollectionReusableView.swift; sourceTree = "<group>"; };
 		DB02B5282B98C92200C45F56 /* ReplyHeaderCollectionReusableView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReplyHeaderCollectionReusableView.xib; sourceTree = "<group>"; };
 		DB1E0E882B629804000A4AA5 /* DormitoryButtonHandlingProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DormitoryButtonHandlingProtocol.swift; sourceTree = "<group>"; };
@@ -79,21 +72,17 @@
 		DB2B7BCE2B457F7200C1847D /* UIButtonExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonExtension.swift; sourceTree = "<group>"; };
 		DB3F18082B6162AB002F1738 /* ProfileSettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileSettingViewController.swift; sourceTree = "<group>"; };
 		DB41008B2B6A665D005C4DD8 /* BrownVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrownVC.swift; sourceTree = "<group>"; };
-		DB48CD062B6905C600E8C7AA /* PopularCollectionViewHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularCollectionViewHeader.swift; sourceTree = "<group>"; };
 		DB496DEA2B70EAFB00F97324 /* TabbarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarViewController.swift; sourceTree = "<group>"; };
 		DB5ACD5F2AA70D190054CA15 /* ExtenstionColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtenstionColor.swift; sourceTree = "<group>"; };
-		DB5ACD612AA714260054CA15 /* SchoolWebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolWebViewController.swift; sourceTree = "<group>"; };
 		DB61AA332B4C1EA70040418B /* RegisterPostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterPostViewController.swift; sourceTree = "<group>"; };
 		DB74D0C52B73EEBF00A90D68 /* Codable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Codable.swift; sourceTree = "<group>"; };
 		DB7EF2762B5E9CB20062FAB5 /* ServicePermissonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicePermissonViewController.swift; sourceTree = "<group>"; };
 		DB7EF2782B5EA4B00062FAB5 /* AlrmElementView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlrmElementView.swift; sourceTree = "<group>"; };
-		DB7EF27A2B5EA6C60062FAB5 /* AlramViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlramViewController.swift; sourceTree = "<group>"; };
 		DB7EF27C2B5EAC790062FAB5 /* ChoiceDormitoryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoiceDormitoryButton.swift; sourceTree = "<group>"; };
 		DB81CFFF2B56E723005EF497 /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		DB932ABF2B6511E300B456FB /* BulluetinBoardCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BulluetinBoardCollectionViewCell.swift; sourceTree = "<group>"; };
 		DB932AC02B6511E300B456FB /* BulluetinBoardCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BulluetinBoardCollectionViewCell.xib; sourceTree = "<group>"; };
 		DBB345F12B42BFD100E70380 /* BulletinBoardMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BulletinBoardMainViewController.swift; sourceTree = "<group>"; };
-		DBB345FD2B42D95600E70380 /* bulletinBoardMainNavigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bulletinBoardMainNavigation.swift; sourceTree = "<group>"; };
 		DBC54C422B568B350071164C /* UIFontExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFontExtension.swift; sourceTree = "<group>"; };
 		DBC54C542B56A46B0071164C /* PretendardVariable.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = PretendardVariable.ttf; sourceTree = "<group>"; };
 		DBC54C562B56A4820071164C /* Pretendard-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Bold.ttf"; sourceTree = "<group>"; };
@@ -102,7 +91,6 @@
 		DBC54C5E2B56A4A80071164C /* Pretendard-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-SemiBold.ttf"; sourceTree = "<group>"; };
 		DBC54C622B56A86D0071164C /* NPSfont_bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NPSfont_bold.ttf; sourceTree = "<group>"; };
 		DBCE10E02B595506008C3367 /* loginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = loginViewController.swift; sourceTree = "<group>"; };
-		DBCE10E22B598308008C3367 /* notificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = notificationViewController.swift; sourceTree = "<group>"; };
 		DBD1E7FB2B84A9D500FD71C6 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
 		DBDF96EE2B84BFB2000E74AE /* ProfileFinishedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileFinishedViewController.swift; sourceTree = "<group>"; };
 		DBF466F72AA5F4E4009FF3EB /* dormitoryFamiles.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = dormitoryFamiles.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -145,14 +133,98 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
-		DB1E0E872B6297D0000A4AA5 /* dormitoryButton */ = {
+		DB1E0E872B6297D0000A4AA5 /* DormitoryButton */ = {
 			isa = PBXGroup;
 			children = (
 				DB1E0E882B629804000A4AA5 /* DormitoryButtonHandlingProtocol.swift */,
 				DB1E0E8A2B629865000A4AA5 /* ChoiceDormitoryViewController.swift */,
 				DB1E0E8C2B62A995000A4AA5 /* SelectedDormitory.swift */,
 			);
-			path = dormitoryButton;
+			path = DormitoryButton;
+			sourceTree = "<group>";
+		};
+		DB32D75B2BA342EC00DE387A /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				DB20E38D2B53D75F000D12A7 /* extensionStroyboard.swift */,
+				DB5ACD5F2AA70D190054CA15 /* ExtenstionColor.swift */,
+				DB2B7BCE2B457F7200C1847D /* UIButtonExtension.swift */,
+				DB81CFFF2B56E723005EF497 /* UIColorExtension.swift */,
+				DB2B7BCA2B45727B00C1847D /* TagButton.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		DB32D75C2BA3434200DE387A /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				DBF466FE2AA5F4E4009FF3EB /* MealMenuViewController.swift */,
+				DB20E38B2B53C2BD000D12A7 /* HomeViewController.swift */,
+				DB7EF27C2B5EAC790062FAB5 /* ChoiceDormitoryButton.swift */,
+				DB1E0E872B6297D0000A4AA5 /* DormitoryButton */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		DB32D75D2BA3435C00DE387A /* BulletinBoard */ = {
+			isa = PBXGroup;
+			children = (
+				DB20F2932B95CBE00052CF5C /* SearchViewController.swift */,
+				DB41008B2B6A665D005C4DD8 /* BrownVC.swift */,
+				DB932AC02B6511E300B456FB /* BulluetinBoardCollectionViewCell.xib */,
+				DB932ABF2B6511E300B456FB /* BulluetinBoardCollectionViewCell.swift */,
+				DB2B7BCC2B457D2500C1847D /* BulletinBoardDetailViewContorllerViewController.swift */,
+				DBFF14922B7BA7EC002DA3AA /* BulletinBoardDetailViewViewController.swift */,
+				DBB345F12B42BFD100E70380 /* BulletinBoardMainViewController.swift */,
+				DB2B7BC82B456F4700C1847D /* TagScrollView.swift */,
+				DB61AA332B4C1EA70040418B /* RegisterPostViewController.swift */,
+				DB00F5B22B81D17C00DDA1E6 /* ReplyCollectionViewCell.swift */,
+				DB02B5272B98C92200C45F56 /* ReplyHeaderCollectionReusableView.swift */,
+				DB02B5282B98C92200C45F56 /* ReplyHeaderCollectionReusableView.xib */,
+			);
+			path = BulletinBoard;
+			sourceTree = "<group>";
+		};
+		DB32D75E2BA3437B00DE387A /* App */ = {
+			isa = PBXGroup;
+			children = (
+				DBF466FA2AA5F4E4009FF3EB /* AppDelegate.swift */,
+				DBF466FC2AA5F4E4009FF3EB /* SceneDelegate.swift */,
+				DBF467082AA5F4E5009FF3EB /* Info.plist */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		DB32D75F2BA3439400DE387A /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				DB496DEA2B70EAFB00F97324 /* TabbarViewController.swift */,
+				DBF467002AA5F4E4009FF3EB /* Main.storyboard */,
+				DBF467052AA5F4E5009FF3EB /* LaunchScreen.storyboard */,
+				DBF467032AA5F4E5009FF3EB /* Assets.xcassets */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		DB32D7602BA3445D00DE387A /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				DBDF96EE2B84BFB2000E74AE /* ProfileFinishedViewController.swift */,
+				DB7EF2762B5E9CB20062FAB5 /* ServicePermissonViewController.swift */,
+				DBCE10E02B595506008C3367 /* loginViewController.swift */,
+				DB7EF2782B5EA4B00062FAB5 /* AlrmElementView.swift */,
+				DB3F18082B6162AB002F1738 /* ProfileSettingViewController.swift */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		DB32D7612BA3452300DE387A /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				DBD1E7FB2B84A9D500FD71C6 /* Network.swift */,
+				DB74D0C52B73EEBF00A90D68 /* Codable.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 		DBC54C3F2B568A6A0071164C /* Font */ = {
@@ -190,48 +262,14 @@
 		DBF466F92AA5F4E4009FF3EB /* dormitoryFamiles */ = {
 			isa = PBXGroup;
 			children = (
-				DB1E0E872B6297D0000A4AA5 /* dormitoryButton */,
+				DB32D7612BA3452300DE387A /* Network */,
+				DB32D7602BA3445D00DE387A /* Onboarding */,
+				DB32D75F2BA3439400DE387A /* Base */,
+				DB32D75E2BA3437B00DE387A /* App */,
+				DB32D75D2BA3435C00DE387A /* BulletinBoard */,
+				DB32D75C2BA3434200DE387A /* Home */,
+				DB32D75B2BA342EC00DE387A /* Extension */,
 				DBC54C3F2B568A6A0071164C /* Font */,
-				DB2B7BCC2B457D2500C1847D /* BulletinBoardDetailViewContorllerViewController.swift */,
-				DB2B7BC82B456F4700C1847D /* TagScrollView.swift */,
-				DB5ACD5F2AA70D190054CA15 /* ExtenstionColor.swift */,
-				DBF466FA2AA5F4E4009FF3EB /* AppDelegate.swift */,
-				DB496DEA2B70EAFB00F97324 /* TabbarViewController.swift */,
-				DBF466FC2AA5F4E4009FF3EB /* SceneDelegate.swift */,
-				DBF466FE2AA5F4E4009FF3EB /* MealMenuViewController.swift */,
-				DB5ACD612AA714260054CA15 /* SchoolWebViewController.swift */,
-				DBB345F12B42BFD100E70380 /* BulletinBoardMainViewController.swift */,
-				DBF467002AA5F4E4009FF3EB /* Main.storyboard */,
-				DBF467032AA5F4E5009FF3EB /* Assets.xcassets */,
-				DBF467052AA5F4E5009FF3EB /* LaunchScreen.storyboard */,
-				DBF467082AA5F4E5009FF3EB /* Info.plist */,
-				DBB345FD2B42D95600E70380 /* bulletinBoardMainNavigation.swift */,
-				DB2B7BCA2B45727B00C1847D /* TagButton.swift */,
-				DBCE10E22B598308008C3367 /* notificationViewController.swift */,
-				DB2B7BCE2B457F7200C1847D /* UIButtonExtension.swift */,
-				DB61AA332B4C1EA70040418B /* RegisterPostViewController.swift */,
-				DB20E38B2B53C2BD000D12A7 /* HomeViewController.swift */,
-				DB20E38D2B53D75F000D12A7 /* extensionStroyboard.swift */,
-				DB81CFFF2B56E723005EF497 /* UIColorExtension.swift */,
-				DBCE10E02B595506008C3367 /* loginViewController.swift */,
-				DB7EF2762B5E9CB20062FAB5 /* ServicePermissonViewController.swift */,
-				DB7EF2782B5EA4B00062FAB5 /* AlrmElementView.swift */,
-				DB7EF27A2B5EA6C60062FAB5 /* AlramViewController.swift */,
-				DB7EF27C2B5EAC790062FAB5 /* ChoiceDormitoryButton.swift */,
-				DB3F18082B6162AB002F1738 /* ProfileSettingViewController.swift */,
-				DB932ABF2B6511E300B456FB /* BulluetinBoardCollectionViewCell.swift */,
-				DB932AC02B6511E300B456FB /* BulluetinBoardCollectionViewCell.xib */,
-				DB48CD062B6905C600E8C7AA /* PopularCollectionViewHeader.swift */,
-				DB41008B2B6A665D005C4DD8 /* BrownVC.swift */,
-				DB74D0C52B73EEBF00A90D68 /* Codable.swift */,
-				DBFF14922B7BA7EC002DA3AA /* BulletinBoardDetailViewViewController.swift */,
-				DB00F5B22B81D17C00DDA1E6 /* ReplyCollectionViewCell.swift */,
-				DB00F5B32B81D17C00DDA1E6 /* ReplyCollectionViewCell.xib */,
-				DBD1E7FB2B84A9D500FD71C6 /* Network.swift */,
-				DBDF96EE2B84BFB2000E74AE /* ProfileFinishedViewController.swift */,
-				DB20F2932B95CBE00052CF5C /* SearchViewController.swift */,
-				DB02B5272B98C92200C45F56 /* ReplyHeaderCollectionReusableView.swift */,
-				DB02B5282B98C92200C45F56 /* ReplyHeaderCollectionReusableView.xib */,
 			);
 			path = dormitoryFamiles;
 			sourceTree = "<group>";
@@ -296,7 +334,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DB00F5B52B81D17C00DDA1E6 /* ReplyCollectionViewCell.xib in Resources */,
 				DBC54C632B56A86D0071164C /* NPSfont_bold.ttf in Resources */,
 				DBC54C5B2B56A4960071164C /* Pretendard-Medium.ttf in Resources */,
 				DB932AC22B6511E300B456FB /* BulluetinBoardCollectionViewCell.xib in Resources */,
@@ -363,12 +400,9 @@
 				DB2B7BC92B456F4700C1847D /* TagScrollView.swift in Sources */,
 				DB7EF2772B5E9CB20062FAB5 /* ServicePermissonViewController.swift in Sources */,
 				DB1E0E892B629804000A4AA5 /* DormitoryButtonHandlingProtocol.swift in Sources */,
-				DBB345FE2B42D95600E70380 /* bulletinBoardMainNavigation.swift in Sources */,
-				DB5ACD622AA714260054CA15 /* SchoolWebViewController.swift in Sources */,
 				DB3F18092B6162AB002F1738 /* ProfileSettingViewController.swift in Sources */,
 				DBCE10E12B595506008C3367 /* loginViewController.swift in Sources */,
 				DB81D0002B56E723005EF497 /* UIColorExtension.swift in Sources */,
-				DB7EF27B2B5EA6C60062FAB5 /* AlramViewController.swift in Sources */,
 				DB5ACD602AA70D190054CA15 /* ExtenstionColor.swift in Sources */,
 				DB7EF2792B5EA4B00062FAB5 /* AlrmElementView.swift in Sources */,
 				DB61AA342B4C1EA70040418B /* RegisterPostViewController.swift in Sources */,
@@ -383,13 +417,11 @@
 				DBFF14932B7BA7EC002DA3AA /* BulletinBoardDetailViewViewController.swift in Sources */,
 				DB932AC12B6511E300B456FB /* BulluetinBoardCollectionViewCell.swift in Sources */,
 				DBF466FF2AA5F4E4009FF3EB /* MealMenuViewController.swift in Sources */,
-				DB48CD082B6905C600E8C7AA /* PopularCollectionViewHeader.swift in Sources */,
 				DB496DEB2B70EAFB00F97324 /* TabbarViewController.swift in Sources */,
 				DB41008C2B6A665D005C4DD8 /* BrownVC.swift in Sources */,
 				DB00F5B42B81D17C00DDA1E6 /* ReplyCollectionViewCell.swift in Sources */,
 				DB20E38C2B53C2BD000D12A7 /* HomeViewController.swift in Sources */,
 				DBF466FB2AA5F4E4009FF3EB /* AppDelegate.swift in Sources */,
-				DBCE10E32B598308008C3367 /* notificationViewController.swift in Sources */,
 				DB20F2942B95CBE00052CF5C /* SearchViewController.swift in Sources */,
 				DB1E0E8D2B62A995000A4AA5 /* SelectedDormitory.swift in Sources */,
 				DBDF96EF2B84BFB2000E74AE /* ProfileFinishedViewController.swift in Sources */,

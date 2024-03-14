@@ -16,14 +16,8 @@ class MealMenuViewController: UIViewController {
         button.setTitleColor(UIColor.white, for: .normal)
         button.backgroundColor = UIColor.titleColor
         button.titleLabel?.font = UIFont(name: "SFProDisplay-Semibold", size: 18)
-        button.addTarget(nil, action: #selector(schoolMealButtonTapped), for: .touchUpInside)
         return button
     }()
-    
-    @objc func schoolMealButtonTapped() {
-        //self.navigationController?.pushViewController(SchoolWebViewController(), animated: true)
-        present(SchoolWebViewController(), animated: true)
-    }
 
 
     override func viewDidLoad() {
