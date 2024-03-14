@@ -29,6 +29,11 @@ DerivedData/
 !default.perspectivev3
 xcuserdata/
 
+### macOS ###
+# General
+.DS_Store
+.AppleDouble
+.LSOverride
 ## Other
 *.moved-aside
 *.xccheckout
