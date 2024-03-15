@@ -12,7 +12,7 @@ protocol HeaderMoreButtonDelegate: AnyObject {
 }
 
 protocol HeaderRereplyButtonDelegate: AnyObject {
-    func moreButtonTapped(replyId: Int)
+    func rereplyButtonTapped(replyId: Int)
 }
 
 class ReplyHeaderCollectionReusableView: UICollectionReusableView {
@@ -44,7 +44,8 @@ class ReplyHeaderCollectionReusableView: UICollectionReusableView {
     }
     
     @IBAction func postRereplyButtonTapped(_ sender: UIButton) {
-        rereplyButtonDelegate?.moreButtonTapped(replyId: commentId!)
+        rereplyButtonDelegate?.rereplyButtonTapped(replyId: commentId!)
+                rereplyButton.backgroundColor = .yellow
     }
     
     

@@ -18,7 +18,6 @@
 		DB20F2942B95CBE00052CF5C /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB20F2932B95CBE00052CF5C /* SearchViewController.swift */; };
 		DB2B7BC92B456F4700C1847D /* TagScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2B7BC82B456F4700C1847D /* TagScrollView.swift */; };
 		DB2B7BCB2B45727B00C1847D /* TagButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2B7BCA2B45727B00C1847D /* TagButton.swift */; };
-		DB2B7BCD2B457D2500C1847D /* BulletinBoardDetailViewContorllerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2B7BCC2B457D2500C1847D /* BulletinBoardDetailViewContorllerViewController.swift */; };
 		DB2B7BCF2B457F7200C1847D /* UIButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2B7BCE2B457F7200C1847D /* UIButtonExtension.swift */; };
 		DB3F18092B6162AB002F1738 /* ProfileSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3F18082B6162AB002F1738 /* ProfileSettingViewController.swift */; };
 		DB41008C2B6A665D005C4DD8 /* BrownVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB41008B2B6A665D005C4DD8 /* BrownVC.swift */; };
@@ -68,7 +67,6 @@
 		DB20F2932B95CBE00052CF5C /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		DB2B7BC82B456F4700C1847D /* TagScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagScrollView.swift; sourceTree = "<group>"; };
 		DB2B7BCA2B45727B00C1847D /* TagButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagButton.swift; sourceTree = "<group>"; };
-		DB2B7BCC2B457D2500C1847D /* BulletinBoardDetailViewContorllerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BulletinBoardDetailViewContorllerViewController.swift; sourceTree = "<group>"; };
 		DB2B7BCE2B457F7200C1847D /* UIButtonExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonExtension.swift; sourceTree = "<group>"; };
 		DB3F18082B6162AB002F1738 /* ProfileSettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileSettingViewController.swift; sourceTree = "<group>"; };
 		DB41008B2B6A665D005C4DD8 /* BrownVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrownVC.swift; sourceTree = "<group>"; };
@@ -175,7 +173,6 @@
 				DB41008B2B6A665D005C4DD8 /* BrownVC.swift */,
 				DB932AC02B6511E300B456FB /* BulluetinBoardCollectionViewCell.xib */,
 				DB932ABF2B6511E300B456FB /* BulluetinBoardCollectionViewCell.swift */,
-				DB2B7BCC2B457D2500C1847D /* BulletinBoardDetailViewContorllerViewController.swift */,
 				DBFF14922B7BA7EC002DA3AA /* BulletinBoardDetailViewViewController.swift */,
 				DBB345F12B42BFD100E70380 /* BulletinBoardMainViewController.swift */,
 				DB2B7BC82B456F4700C1847D /* TagScrollView.swift */,
@@ -413,7 +410,6 @@
 				DB61AA342B4C1EA70040418B /* RegisterPostViewController.swift in Sources */,
 				DB20E38E2B53D75F000D12A7 /* extensionStroyboard.swift in Sources */,
 				DBD1E7FC2B84A9D500FD71C6 /* Network.swift in Sources */,
-				DB2B7BCD2B457D2500C1847D /* BulletinBoardDetailViewContorllerViewController.swift in Sources */,
 				DB2B7BCB2B45727B00C1847D /* TagButton.swift in Sources */,
 				DB1E0E8B2B629865000A4AA5 /* ChoiceDormitoryViewController.swift in Sources */,
 				DB74D0C62B73EEBF00A90D68 /* Codable.swift in Sources */,

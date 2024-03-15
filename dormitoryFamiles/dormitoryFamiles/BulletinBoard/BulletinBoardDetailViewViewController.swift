@@ -41,6 +41,7 @@ class BulletinBoardDetailViewViewController: UIViewController {
     var collectionViewHeightConstraint = NSLayoutConstraint()
     var url = ""
     var activityIndicator = UIActivityIndicatorView(style: .large)
+    var selectedReplyId = -1
     
     
     override func viewDidLoad() {
@@ -68,8 +69,13 @@ class BulletinBoardDetailViewViewController: UIViewController {
         let commentData = ["content": commentTextView.text]
         
         if let jsonData = try? JSONEncoder().encode(commentData) {
-            let url = URL(string: Network.replyUrl(id: id))!
-            var request = URLRequest(url: url)
+            var url = URL(string: "")
+            if selectedReplyId == -1 {
+                url = URL(string: Network.replyUrl(id: id))!
+            }else {
+                url = URL(string: Network.postRereplyUrl(replyId: selectedReplyId))!
+            }
+            var request = URLRequest(url: url!)
             request.httpMethod = "POST"
             request.addValue("application/json", forHTTPHeaderField: "Content-Type")
             request.httpBody = jsonData
@@ -215,43 +221,19 @@ extension BulletinBoardDetailViewViewController: UITextViewDelegate {
     }
 }
 
-extension BulletinBoardDetailViewViewController: UICollectionViewDelegate, UICollectionViewDataSource, HeaderMoreButtonDelegate {
-    func moreButtonTapped(replyId: Int) {
-        print(replyId)
-        let actionSheet = UIAlertController(title: "댓글 메뉴", message: nil, preferredStyle: .actionSheet)
-        actionSheet.addAction(UIAlertAction(title: "삭제하기", style: .destructive, handler: {(ACTION:UIAlertAction) in
-            
-            
-            Network.deleteMethod(url: "http://43.202.254.127:8080/api/comments/\(replyId)") { (result: Result<ReplyDelete, Error>) in
-                switch result {
-                case .success(let response):
-                    print(response)
-                    print("아아")
-                case .failure(let error):
-                    print("Error: \(error)")
-                }
-            }
-            
-        }))
-        actionSheet.addAction(UIAlertAction(title: "닫기", style: .cancel, handler: nil))
-        
-        self.present(actionSheet, animated: true, completion: nil)
-    }
-
-    
-    
+extension BulletinBoardDetailViewViewController: UICollectionViewDelegate, UICollectionViewDataSource, HeaderMoreButtonDelegate, HeaderRereplyButtonDelegate {
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-           return dataClass?.comments.count ?? 0
-       }
-
-       func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-           guard let count = dataClass?.comments[section].replyComments?.count, count > 0 else {
-               return 0
-           }
-           return count
-       }
-
+        return dataClass?.comments.count ?? 0
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        guard let count = dataClass?.comments[section].replyComments?.count, count > 0 else {
+            return 0
+        }
+        return count
+    }
+    
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "rereplyCell", for: indexPath) as! ReplyCollectionViewCell
@@ -275,6 +257,7 @@ extension BulletinBoardDetailViewViewController: UICollectionViewDelegate, UICol
             
             let replyComment = dataClass?.comments[indexPath.section]
             headerView.moreButtonDelegate = self
+            headerView.rereplyButtonDelegate = self
             headerView.commentId = replyComment?.commentId ?? 0
             headerView.memberId = replyComment?.memberId ?? 0
             headerView.profileUrl = replyComment?.profileUrl ?? ""
@@ -285,7 +268,7 @@ extension BulletinBoardDetailViewViewController: UICollectionViewDelegate, UICol
             headerView.content.text = replyComment?.content ?? ""
             headerView.isWriter = ((replyComment?.isWriter) != nil)
             headerView.isDeleted = ((replyComment?.isDeleted) != nil)
-    
+            
             
             return headerView
         default:
@@ -293,10 +276,31 @@ extension BulletinBoardDetailViewViewController: UICollectionViewDelegate, UICol
         }
     }
     
-    func headerButtonTapped(forIndexPath indexPath: IndexPath) {
+    func moreButtonTapped(replyId: Int) {
+            print(replyId)
+            let actionSheet = UIAlertController(title: "댓글 메뉴", message: nil, preferredStyle: .actionSheet)
+            actionSheet.addAction(UIAlertAction(title: "삭제하기", style: .destructive, handler: {(ACTION:UIAlertAction) in
+                
+                
+                Network.deleteMethod(url: "http://43.202.254.127:8080/api/comments/\(replyId)") { (result: Result<ReplyDelete, Error>) in
+                    switch result {
+                    case .success(let response):
+                        print(response)
+                        print("아아")
+                    case .failure(let error):
+                        print("Error: \(error)")
+                    }
+                }
+                
+            }))
+            actionSheet.addAction(UIAlertAction(title: "닫기", style: .cancel, handler: nil))
+            
+            self.present(actionSheet, animated: true, completion: nil)
+        }
         
-    }
-    
+        func rereplyButtonTapped(replyId: Int) {
+            selectedReplyId = replyId
+        }
 }
 
 extension BulletinBoardDetailViewViewController: UICollectionViewDelegateFlowLayout {

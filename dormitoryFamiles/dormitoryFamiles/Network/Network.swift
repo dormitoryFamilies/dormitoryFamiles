@@ -33,7 +33,7 @@ struct Network {
     }
     
     static func postRereplyUrl(replyId: Int) -> String {
-        return Network.url + "/api/comments/\(replyId)/reply-comments"
+        return Network.url + "/api/comments/\(replyId)/replyComments"
     }
 
     static func replyUrl(id: Int) -> String {
