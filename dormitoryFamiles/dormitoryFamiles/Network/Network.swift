@@ -31,13 +31,17 @@ struct Network {
         }
         return url
     }
+    
+    static func postRereplyUrl(replyId: Int) -> String {
+        return Network.url + "/api/comments/\(replyId)/reply-comments"
+    }
 
     static func replyUrl(id: Int) -> String {
-        return "http://43.202.254.127:8080/api/articles/\(id)/comments"
+        return Network.url + "/api/articles/\(id)/comments"
     }
     
     static func postReplyUrl(id: Int) -> String {
-        return "http://43.202.254.127:8080/api/articles/\(id)/comments"
+        return Network.url + "/api/articles/\(id)/comments"
     }
     
     static func getMethod<T: Codable>(url: String, completion: @escaping (Result<T, Error>) -> Void) {
