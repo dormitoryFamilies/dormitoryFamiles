@@ -7,12 +7,17 @@
 
 import UIKit
 
-protocol HeaderDelegate: AnyObject {
+protocol HeaderMoreButtonDelegate: AnyObject {
+    func moreButtonTapped(replyId: Int)
+}
+
+protocol HeaderRereplyButtonDelegate: AnyObject {
     func moreButtonTapped(replyId: Int)
 }
 
 class ReplyHeaderCollectionReusableView: UICollectionReusableView {
-    weak var buttonDelegate: HeaderDelegate?
+    weak var moreButtonDelegate: HeaderMoreButtonDelegate?
+    weak var rereplyButtonDelegate: HeaderRereplyButtonDelegate?
    
     var commentId: Int?
     var memberId: Int?
@@ -27,6 +32,7 @@ class ReplyHeaderCollectionReusableView: UICollectionReusableView {
     @IBOutlet weak var rereplyButton: UIButton!
     @IBOutlet weak var nickname: UILabel!
     @IBOutlet weak var content: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         rereplyButton.contentHorizontalAlignment = .leading
@@ -34,7 +40,12 @@ class ReplyHeaderCollectionReusableView: UICollectionReusableView {
     }
     
     @IBAction func moreButtonTapped(_ sender: UIButton) {
-        buttonDelegate!.moreButtonTapped(replyId: commentId!)
+        moreButtonDelegate!.moreButtonTapped(replyId: commentId!)
     }
+    
+    @IBAction func postRereplyButtonTapped(_ sender: UIButton) {
+        rereplyButtonDelegate?.moreButtonTapped(replyId: commentId!)
+    }
+    
     
 }

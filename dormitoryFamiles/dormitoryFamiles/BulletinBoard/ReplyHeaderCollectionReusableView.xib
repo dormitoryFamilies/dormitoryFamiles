@@ -95,6 +95,9 @@
                             <userDefinedRuntimeAttributes>
                                 <userDefinedRuntimeAttribute type="string" keyPath="body2" value="답글달기"/>
                             </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="postRereplyButtonTapped:" destination="U6b-Vx-4bR" eventType="touchUpInside" id="S1N-gG-s3s"/>
+                            </connections>
                         </button>
                     </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>

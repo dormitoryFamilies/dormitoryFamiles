@@ -215,7 +215,7 @@ extension BulletinBoardDetailViewViewController: UITextViewDelegate {
     }
 }
 
-extension BulletinBoardDetailViewViewController: UICollectionViewDelegate, UICollectionViewDataSource, HeaderDelegate {
+extension BulletinBoardDetailViewViewController: UICollectionViewDelegate, UICollectionViewDataSource, HeaderMoreButtonDelegate {
     func moreButtonTapped(replyId: Int) {
         print(replyId)
         let actionSheet = UIAlertController(title: "댓글 메뉴", message: nil, preferredStyle: .actionSheet)
@@ -274,7 +274,7 @@ extension BulletinBoardDetailViewViewController: UICollectionViewDelegate, UICol
             let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "replyCell", for: indexPath) as! ReplyHeaderCollectionReusableView
             
             let replyComment = dataClass?.comments[indexPath.section]
-            headerView.buttonDelegate = self
+            headerView.moreButtonDelegate = self
             headerView.commentId = replyComment?.commentId ?? 0
             headerView.memberId = replyComment?.memberId ?? 0
             headerView.profileUrl = replyComment?.profileUrl ?? ""
