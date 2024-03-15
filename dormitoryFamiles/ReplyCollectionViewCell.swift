@@ -1,14 +1,14 @@
 //
-//  CommentCollectionViewCell.swift
+//  ReplyCollectionViewCell.swift
 //  dormitoryFamiles
 //
-//  Created by leehwajin on 2024/02/18.
+//  Created by leehwajin on 2024/03/15.
 //
 
 import UIKit
 
 class ReplyCollectionViewCell: UICollectionViewCell {
-    
+
     var replyCommentId: Int?
     var memberId: Int?
     var profileUrl: String?
