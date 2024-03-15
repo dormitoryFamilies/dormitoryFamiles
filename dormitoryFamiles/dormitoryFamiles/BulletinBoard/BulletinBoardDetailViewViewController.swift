@@ -278,7 +278,7 @@ extension BulletinBoardDetailViewViewController: UICollectionViewDelegate, UICol
             headerView.commentId = replyComment?.commentId ?? 0
             headerView.memberId = replyComment?.memberId ?? 0
             headerView.profileUrl = replyComment?.profileUrl ?? ""
-            headerView.nickname.text = replyComment?.nickname ?? ""
+            headerView.nickname.text = replyComment?.nickName ?? ""
             let datetime = replyComment?.createdAt ?? ""
             headerView.timeLabel.body2 = changeToTime(createdAt: datetime)
             headerView.dateLabel.body2 = changeToDate(createdAt: datetime)

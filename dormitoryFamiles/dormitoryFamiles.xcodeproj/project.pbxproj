@@ -578,7 +578,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 7B9KLZFFL8;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = dormitoryFamiles/Info.plist;
+				INFOPLIST_FILE = dormitoryFamiles/App/info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -607,7 +607,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 7B9KLZFFL8;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = dormitoryFamiles/Info.plist;
+				INFOPLIST_FILE = dormitoryFamiles/App/info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;

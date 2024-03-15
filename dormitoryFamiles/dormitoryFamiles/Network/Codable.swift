@@ -14,7 +14,7 @@ struct Article: Codable {
     let boardType: String
     let title: String
     let content: String
-    let CommentCount: Int
+    let commentCount: Int
     let wishCount: Int
     let isWished: Bool
     let status: String
@@ -89,7 +89,7 @@ struct Comment: Codable {
     let commentId: Int
     let memberId: Int
     let profileUrl: String
-    let nickname: String
+    let nickName: String
     let createdAt: String
     let content: String
     let isWriter: Bool

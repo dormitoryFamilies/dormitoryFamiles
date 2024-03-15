@@ -69,7 +69,7 @@ extension BrownVC: UICollectionViewDelegate, UICollectionViewDataSource, UIColle
         cell.title.text = article.title
         cell.nickName.text = article.nickName
         cell.viewCount.text = "조회" + String(article.viewCount)
-        cell.commentCount.text = String(article.CommentCount)
+        cell.commentCount.text = String(article.commentCount)
         cell.wishCount.text = String(article.wishCount)
         cell.content.text = article.content
         cell.categoryTag.body2 = article.boardType
