@@ -8,7 +8,7 @@
 import UIKit
 
 class ReplyCollectionViewCell: UICollectionViewCell {
-
+    weak var moreButtonDelegate: MoreButtonDelegate?
     var replyCommentId: Int?
     var memberId: Int?
     var profileUrl: String?
@@ -19,5 +19,8 @@ class ReplyCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var content: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
+    }
+    @IBAction func moreButtonTapped(_ sender: UIButton) {
+        moreButtonDelegate!.moreButtonTapped(replyId: replyCommentId!, format: .rereply)
     }
 }

@@ -7,8 +7,8 @@
 
 import UIKit
 
-protocol HeaderMoreButtonDelegate: AnyObject {
-    func moreButtonTapped(replyId: Int)
+protocol MoreButtonDelegate: AnyObject {
+    func moreButtonTapped(replyId: Int, format: Reply)
 }
 
 protocol HeaderRereplyButtonDelegate: AnyObject {
@@ -16,7 +16,7 @@ protocol HeaderRereplyButtonDelegate: AnyObject {
 }
 
 class ReplyHeaderCollectionReusableView: UICollectionReusableView {
-    weak var moreButtonDelegate: HeaderMoreButtonDelegate?
+    weak var moreButtonDelegate: MoreButtonDelegate?
     weak var rereplyButtonDelegate: HeaderRereplyButtonDelegate?
    
     var commentId: Int?
@@ -40,7 +40,7 @@ class ReplyHeaderCollectionReusableView: UICollectionReusableView {
     }
     
     @IBAction func moreButtonTapped(_ sender: UIButton) {
-        moreButtonDelegate!.moreButtonTapped(replyId: commentId!)
+        moreButtonDelegate!.moreButtonTapped(replyId: commentId!, format: .reply)
     }
     
     @IBAction func postRereplyButtonTapped(_ sender: UIButton) {
@@ -49,4 +49,9 @@ class ReplyHeaderCollectionReusableView: UICollectionReusableView {
     }
     
     
+}
+
+enum Reply {
+    case reply
+    case rereply
 }

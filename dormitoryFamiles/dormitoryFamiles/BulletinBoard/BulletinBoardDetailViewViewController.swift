@@ -221,7 +221,7 @@ extension BulletinBoardDetailViewViewController: UITextViewDelegate {
     }
 }
 
-extension BulletinBoardDetailViewViewController: UICollectionViewDelegate, UICollectionViewDataSource, HeaderMoreButtonDelegate, HeaderRereplyButtonDelegate {
+extension BulletinBoardDetailViewViewController: UICollectionViewDelegate, UICollectionViewDataSource, MoreButtonDelegate, HeaderRereplyButtonDelegate {
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return dataClass?.comments.count ?? 0
@@ -246,6 +246,7 @@ extension BulletinBoardDetailViewViewController: UICollectionViewDelegate, UICol
         cell.profileUrl = replyComment?.profileUrl ?? ""
         cell.createdAt = replyComment?.createdAt ?? ""
         cell.isWriter = ((replyComment?.isWriter) != nil)
+        cell.moreButtonDelegate = self
         return cell
     }
     
@@ -276,13 +277,19 @@ extension BulletinBoardDetailViewViewController: UICollectionViewDelegate, UICol
         }
     }
     
-    func moreButtonTapped(replyId: Int) {
+    func moreButtonTapped(replyId: Int, format: Reply) {
             print(replyId)
             let actionSheet = UIAlertController(title: "댓글 메뉴", message: nil, preferredStyle: .actionSheet)
             actionSheet.addAction(UIAlertAction(title: "삭제하기", style: .destructive, handler: {(ACTION:UIAlertAction) in
                 
-                
-                Network.deleteMethod(url: "http://43.202.254.127:8080/api/comments/\(replyId)") { (result: Result<ReplyDelete, Error>) in
+                var url = ""
+                switch format {
+                case .rereply:
+                    url = "http://43.202.254.127:8080/api/replyComments/\(replyId)"
+                case .reply:
+                    url = "http://43.202.254.127:8080/api/comments/\(replyId)"
+                }
+                Network.deleteMethod(url: url) { (result: Result<ReplyDelete, Error>) in
                     switch result {
                     case .success(let response):
                         print(response)
